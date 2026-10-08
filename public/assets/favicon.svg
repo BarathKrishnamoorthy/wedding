@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="goldGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF2B2" />
+      <stop offset="45%" stop-color="#D4AF37" />
+      <stop offset="85%" stop-color="#996515" />
+      <stop offset="100%" stop-color="#5B3A08" />
+    </radialGradient>
+    <radialGradient id="emeraldGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1B4D3E" />
+      <stop offset="70%" stop-color="#0F2D24" />
+      <stop offset="100%" stop-color="#071914" />
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="url(#emeraldGrad)" stroke="url(#goldGrad)" stroke-width="3" />
+  <circle cx="50" cy="50" r="41" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="2,2" />
+  <text x="50" y="58" font-family="'Cinzel Decorative', Georgia, serif" font-size="24" font-weight="bold" fill="url(#goldGrad)" text-anchor="middle">S&amp;K</text>
+</svg>
