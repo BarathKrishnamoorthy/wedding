@@ -23,7 +23,7 @@ export default function ShareModal({ isOpen, onClose, onToast }) {
 
     return `${intro}
 
-🗓️ Sunday, 22 November 2026, 9:30 am – 10:30 am
+📅 Sunday, 22 November 2026, 9:30 am – 10:30 am
 📍 Sri Raja Rajeshwari Kalyana Mandapam, GST Road, Near Kathipara, Guindy, Chennai
 
 Reception: Sunday, 22 November, evening — 6:30 pm onwards.
@@ -268,7 +268,7 @@ ${personalizedUrl}`;
                   With the blessings of our families, we joyfully invite you to the wedding of <strong>Siva &amp; Kani</strong>.
                 </p>
                 <p style={{ margin: "0 0 4px" }}>
-                  🗓️ <strong>Sunday, 22 November 2026</strong>, 9:30 am – 10:30 am
+                  📅 <strong>Sunday, 22 November 2026</strong>, 9:30 am – 10:30 am
                 </p>
                 <p style={{ margin: "0 0 10px" }}>
                   📍 <strong>Sri Raja Rajeshwari Kalyana Mandapam</strong>, GST Road, Near Kathipara, Guindy, Chennai
