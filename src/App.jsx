@@ -140,14 +140,14 @@ export default function App() {
         {/* 5. Love Story / Our Journey Timeline */}
         {/* <LoveStorySection /> */}
 
-        {/* 6. Captured Memories Photo Gallery */}
-        <PhotoGallerySection />
+        {/* 6. Captured Memories Photo Gallery — Hidden */}
+        {/* <PhotoGallerySection /> */}
 
         {/* 7. Interactive RSVP System */}
         {/* <RSVPSection recipientName={recipientName} onToast={showToast} /> */}
 
-        {/* 8. Live Wishes Wall */}
-        <WishesWallSection recipientName={recipientName} onToast={showToast} />
+        {/* 8. Live Wishes Wall — Hidden */}
+        {/* <WishesWallSection recipientName={recipientName} onToast={showToast} /> */}
 
         {/* 9. Closing Section with Share Action */}
         <ClosingSection onOpenShare={() => setIsShareModalOpen(true)} />

@@ -23,10 +23,10 @@ export default function ShareModal({ isOpen, onClose, onToast }) {
 
     return `${intro}
 
-📅 Sunday, 22 November 2026, 9:30 am – 10:30 am
-📍 Sri Raja Rajeshwari Kalyana Mandapam, GST Road, Near Kathipara, Guindy, Chennai
+📅 Wednesday, 11 November 2026, 9:30 am – 10:30 am
+📍 Kariamangalam, Tamil Nadu 635111
 
-Reception: Sunday, 22 November, evening — 6:30 pm onwards.
+Reception: Wednesday, 11 November, Morning — 9:30 am - 10:30 am.
 
 Please view the full invitation :
 ${personalizedUrl}`;
@@ -64,7 +64,7 @@ ${personalizedUrl}`;
       try {
         await navigator.share(shareData);
         onClose();
-      } catch (err) {}
+      } catch (err) { }
     } else {
       handleCopyFullMessage();
     }
@@ -268,13 +268,13 @@ ${personalizedUrl}`;
                   With the blessings of our families, we joyfully invite you to the wedding of <strong>Siva &amp; Kani</strong>.
                 </p>
                 <p style={{ margin: "0 0 4px" }}>
-                  📅 <strong>Sunday, 22 November 2026</strong>, 9:30 am – 10:30 am
+                  📅 <strong>Wednesday, 11 November 2026</strong>, 9:30 am – 10:30 am
                 </p>
                 <p style={{ margin: "0 0 10px" }}>
-                  📍 <strong>Sri Raja Rajeshwari Kalyana Mandapam</strong>, GST Road, Near Kathipara, Guindy, Chennai
+                  📍 <strong>Kariamangalam, Tamil Nadu 635111</strong>
                 </p>
                 <p style={{ margin: "0 0 12px" }}>
-                  Reception: Sunday, 22 November, evening — 6:30 pm onwards.
+                  Reception: Wednesday, 11 November, Morning — 9:30 am - 10:30 am.
                 </p>
                 <p style={{ margin: "0 0 2px", color: "#54656F", fontSize: "13px" }}>
                   Please view the full invitation :
@@ -377,18 +377,18 @@ ${personalizedUrl}`;
                 }}
               >
                 <svg width="90" height="90" viewBox="0 0 100 100" fill="#000000">
-                  <rect width="100" height="100" fill="#FFFFFF"/>
-                  <rect x="10" y="10" width="25" height="25" fill="#1A050B"/>
-                  <rect x="15" y="15" width="15" height="15" fill="#FFFFFF"/>
-                  <rect x="65" y="10" width="25" height="25" fill="#1A050B"/>
-                  <rect x="70" y="15" width="15" height="15" fill="#FFFFFF"/>
-                  <rect x="10" y="65" width="25" height="25" fill="#1A050B"/>
-                  <rect x="15" y="70" width="15" height="15" fill="#FFFFFF"/>
-                  <rect x="42" y="15" width="12" height="12" fill="#1A050B"/>
-                  <rect x="42" y="42" width="16" height="16" fill="#1A050B"/>
-                  <rect x="65" y="45" width="12" height="12" fill="#1A050B"/>
-                  <rect x="45" y="70" width="20" height="10" fill="#1A050B"/>
-                  <rect x="75" y="70" width="15" height="15" fill="#1A050B"/>
+                  <rect width="100" height="100" fill="#FFFFFF" />
+                  <rect x="10" y="10" width="25" height="25" fill="#1A050B" />
+                  <rect x="15" y="15" width="15" height="15" fill="#FFFFFF" />
+                  <rect x="65" y="10" width="25" height="25" fill="#1A050B" />
+                  <rect x="70" y="15" width="15" height="15" fill="#FFFFFF" />
+                  <rect x="10" y="65" width="25" height="25" fill="#1A050B" />
+                  <rect x="15" y="70" width="15" height="15" fill="#FFFFFF" />
+                  <rect x="42" y="15" width="12" height="12" fill="#1A050B" />
+                  <rect x="42" y="42" width="16" height="16" fill="#1A050B" />
+                  <rect x="65" y="45" width="12" height="12" fill="#1A050B" />
+                  <rect x="45" y="70" width="20" height="10" fill="#1A050B" />
+                  <rect x="75" y="70" width="15" height="15" fill="#1A050B" />
                 </svg>
               </div>
             </div>

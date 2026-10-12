@@ -16,7 +16,7 @@ export default function ScheduleSection({ onToast }) {
       <div className="wrap">
         <div className="eyebrow">
           <PartyPopper size={14} color="var(--gold)" />
-          <span>22 November 2026</span>
+          <span>11 November 2026</span>
           <PartyPopper size={14} color="var(--gold)" />
         </div>
         <h2 className="h2-title">The Royal Celebrations</h2>
@@ -55,7 +55,7 @@ export default function ScheduleSection({ onToast }) {
                 lineHeight: "1"
               }}
             >
-              22
+              11
             </b>
             <span
               style={{
@@ -68,7 +68,7 @@ export default function ScheduleSection({ onToast }) {
                 marginTop: "4px"
               }}
             >
-              Sun · AM
+              Wed · AM
             </span>
           </div>
 
@@ -92,7 +92,7 @@ export default function ScheduleSection({ onToast }) {
             >
               <Sparkles size={11} /> Sacred Vedic Muhurtham
             </div>
-            
+
             <h3
               className="font-serif"
               style={{
@@ -234,7 +234,7 @@ export default function ScheduleSection({ onToast }) {
                 color: "#FFFFFF"
               }}
             >
-              22
+              11
             </b>
             <span
               style={{
@@ -247,7 +247,7 @@ export default function ScheduleSection({ onToast }) {
                 marginTop: "4px"
               }}
             >
-              Sun · PM
+              Wed · AM
             </span>
           </div>
 
@@ -308,7 +308,7 @@ export default function ScheduleSection({ onToast }) {
             </div>
 
             {/* Dress Code Tag */}
-            <div
+            {/* <div
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -324,7 +324,7 @@ export default function ScheduleSection({ onToast }) {
             >
               <Shirt size={13} color="var(--gold)" />
               <span>Dress Code: Royal Glamour &amp; Evening Silks</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Actions */}

@@ -5,32 +5,32 @@ export const WEDDING_CONFIG = {
   heroSubtitle: "With the divine blessings of Almighty & our beloved elders",
 
   // Dates
-  weddingDateFormatted: "Sunday, 22 November 2026",
-  receptionDateFormatted: "Sunday, 22 November 2026",
-  city: "Chennai · Tamil Nadu",
+  weddingDateFormatted: "Wednesday, 12 November 2026",
+  receptionDateFormatted: "Wednesday, 12 November 2026",
+  city: "Kariamangalam · Tamil Nadu",
 
   // Muhurtham Timings
-  muhurthamStart: "2026-11-22T09:30:00+05:30",
-  muhurthamEnd: "2026-11-22T10:30:00+05:30",
-  muhurthamWindow: "Auspicious Muhurtham · 9:30 am – 10:30 am (Dhanur Lagnam)",
+  muhurthamStart: "2026-11-11T08:30:00+05:30",
+  muhurthamEnd: "2026-11-11T11:00:00+05:30",
+  muhurthamWindow: "Auspicious Muhurtham · 8:30 am – 11:00 am",
 
   // Reception Timings
-  receptionStart: "2026-11-22T18:30:00+05:30",
-  receptionEnd: "2026-11-22T22:30:00+05:30",
-  receptionWindow: "Evening Reception & Gala Dinner · 6:30 pm onwards",
+  receptionStart: "2026-11-11T11:30:00+05:30",
+  receptionEnd: "2026-11-11T15:30:00+05:30",
+  receptionWindow: "Morning Reception 11:30 am - 3:30 pm",
 
   // Venues
   weddingVenue: {
-    name: "Sri Raja Rajeshwari Kalyana Mandapam",
-    address: "GST Road, Near Kathipara, Guindy, Chennai, Tamil Nadu 600032",
-    mapQuery: "Sri Raja Rajeshwari Kalyana Mandapam GST Road Chennai",
-    mapLink: "https://maps.google.com/?q=Sri+Raja+Rajeshwari+Kalyana+Mandapam+Guindy+Chennai"
+    name: "Sri Yashoda Mahal",
+    address: "Kariamangalam, Tamil Nadu 635111",
+    mapQuery: "8664+HG Kariamangalam, Tamil Nadu",
+    mapLink: "https://maps.app.goo.gl/NjiiMHDyo5EnJVw56"
   },
   receptionVenue: {
-    name: "The Grand Royal Palace & Lawns",
-    address: "East Coast Road (ECR), Palavakkam, Chennai, Tamil Nadu 600041",
-    mapQuery: "The Grand Royal Palace East Coast Road Chennai",
-    mapLink: "https://maps.google.com/?q=The+Grand+Royal+Palace+ECR+Chennai"
+    name: "Sri Yashoda Mahal",
+    address: "Kariamangalam, Tamil Nadu 635111",
+    mapQuery: "8664+HG Kariamangalam, Tamil Nadu",
+    mapLink: "https://maps.app.goo.gl/NjiiMHDyo5EnJVw56"
   },
 
   // Family Lineage & Compliments

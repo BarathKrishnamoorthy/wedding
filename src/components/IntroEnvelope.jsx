@@ -384,7 +384,7 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
                     fontWeight: "700"
                   }}
                 >
-                  22 November 2026 · Chennai
+                  11 November 2026 · {WEDDING_CONFIG.city}
                 </p>
               </div>
             </div>
@@ -432,7 +432,7 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
                 opacity: 0.9
               }}
             >
-              ✦ திருமண அழைப்பிதழ் ✦
+              ✦ Royal Wedding Invitation ✦
             </div>
           </div>
 

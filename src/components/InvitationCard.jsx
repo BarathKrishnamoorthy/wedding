@@ -25,7 +25,7 @@ export default function InvitationCard() {
               textShadow: "0 0 12px rgba(255, 215, 0, 0.5)"
             }}
           >
-            ॐ || ஸ்ரீ கணேஷாய நம: || ॐ
+            ॐ || Sri Ganeshaya Namaha || ॐ
           </div>
 
           <p
