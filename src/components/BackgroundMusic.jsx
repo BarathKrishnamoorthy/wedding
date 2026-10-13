@@ -12,16 +12,12 @@ export default function BackgroundMusic({ onPlayStateChange, startTrigger }) {
   const playerRef = useRef(null);
   const containerRef = useRef(null);
   const audioRef = useRef(null);
+  const shouldPlayRef = useRef(true);
+  const isPlayingRef = useRef(false);
 
   const currentTrack = WEDDING_CONFIG.music.alternativeTracks[currentTrackIndex] || WEDDING_CONFIG.music.alternativeTracks[0];
 
   useEffect(() => {
-    // Check saved preference
-    const savedMusicPref = localStorage.getItem("sk_music_pref");
-    if (savedMusicPref === "off") {
-      setIsMuted(true);
-    }
-
     // Load YouTube IFrame API
     if (!window.YT) {
       const tag = document.createElement("script");
@@ -45,6 +41,18 @@ export default function BackgroundMusic({ onPlayStateChange, startTrigger }) {
     };
   }, []);
 
+  const attemptPlay = (target) => {
+    const player = target || playerRef.current;
+    if (!player || typeof player.playVideo !== "function") return;
+    try {
+      player.unMute();
+      player.setVolume(70);
+      player.playVideo();
+    } catch (err) {
+      console.warn("Autoplay deferred until interaction", err);
+    }
+  };
+
   const initPlayer = (videoId) => {
     try {
       playerRef.current = new window.YT.Player("youtube-audio-player", {
@@ -52,7 +60,7 @@ export default function BackgroundMusic({ onPlayStateChange, startTrigger }) {
         width: "1",
         videoId: videoId,
         playerVars: {
-          autoplay: 0,
+          autoplay: 1,
           controls: 0,
           disablekb: 1,
           fs: 0,
@@ -65,20 +73,32 @@ export default function BackgroundMusic({ onPlayStateChange, startTrigger }) {
           onReady: (event) => {
             setIsYTReady(true);
             try {
-              event.target.setVolume(55);
+              event.target.setVolume(70);
+              event.target.unMute();
             } catch (e) {}
+
+            // Always start music if triggered or site is already opened
+            if (shouldPlayRef.current) {
+              attemptPlay(event.target);
+            }
           },
           onStateChange: (event) => {
             if (event.data === window.YT.PlayerState.PLAYING) {
               setIsPlaying(true);
+              isPlayingRef.current = true;
               if (onPlayStateChange) onPlayStateChange(true);
             } else if (event.data === window.YT.PlayerState.PAUSED || event.data === window.YT.PlayerState.ENDED) {
               if (event.data === window.YT.PlayerState.ENDED) {
                 event.target.seekTo(0);
                 event.target.playVideo();
               } else {
+                isPlayingRef.current = false;
                 setIsPlaying(false);
                 if (onPlayStateChange) onPlayStateChange(false);
+                // If paused unexpectedly by browser when not user-intended, resume if active
+                if (shouldPlayRef.current && !document.hidden) {
+                  try { event.target.playVideo(); } catch (e) {}
+                }
               }
             }
           },
@@ -92,32 +112,67 @@ export default function BackgroundMusic({ onPlayStateChange, startTrigger }) {
     }
   };
 
+  // Start when startTrigger activates or if already opened
   useEffect(() => {
-    if (startTrigger && !isMuted) {
+    if (startTrigger || sessionStorage.getItem("sk_wedding_opened") === "1") {
+      shouldPlayRef.current = true;
       playAudio();
     }
   }, [startTrigger]);
 
-  const playAudio = () => {
-    if (playerRef.current && typeof playerRef.current.playVideo === "function") {
-      try {
-        playerRef.current.unMute();
-        playerRef.current.setVolume(60);
-        playerRef.current.playVideo();
-        setIsPlaying(true);
-        if (onPlayStateChange) onPlayStateChange(true);
-      } catch (err) {
-        console.warn("Autoplay attempt handled", err);
+  // First user interaction auto-start (bypasses mobile browser autoplay restrictions)
+  useEffect(() => {
+    const handleUserGesture = () => {
+      if (shouldPlayRef.current && !isPlayingRef.current) {
+        attemptPlay();
       }
+    };
+
+    window.addEventListener("pointerdown", handleUserGesture, { passive: true });
+    window.addEventListener("touchstart", handleUserGesture, { passive: true });
+    window.addEventListener("click", handleUserGesture, { passive: true });
+    window.addEventListener("scroll", handleUserGesture, { passive: true });
+
+    return () => {
+      window.removeEventListener("pointerdown", handleUserGesture);
+      window.removeEventListener("touchstart", handleUserGesture);
+      window.removeEventListener("click", handleUserGesture);
+      window.removeEventListener("scroll", handleUserGesture);
+    };
+  }, []);
+
+  // Resume playback when returning to the tab
+  useEffect(() => {
+    const handleResume = () => {
+      if (!document.hidden && shouldPlayRef.current && !isPlayingRef.current) {
+        attemptPlay();
+      }
+    };
+    document.addEventListener("visibilitychange", handleResume);
+    window.addEventListener("focus", handleResume);
+    return () => {
+      document.removeEventListener("visibilitychange", handleResume);
+      window.removeEventListener("focus", handleResume);
+    };
+  }, []);
+
+  const playAudio = () => {
+    shouldPlayRef.current = true;
+    setIsMuted(false);
+    if (playerRef.current && typeof playerRef.current.playVideo === "function") {
+      attemptPlay();
     } else if (audioRef.current) {
       audioRef.current.play().then(() => {
         setIsPlaying(true);
+        isPlayingRef.current = true;
         if (onPlayStateChange) onPlayStateChange(true);
       }).catch(() => {});
     }
   };
 
   const pauseAudio = () => {
+    shouldPlayRef.current = false;
+    isPlayingRef.current = false;
     if (playerRef.current && typeof playerRef.current.pauseVideo === "function") {
       try {
         playerRef.current.pauseVideo();
@@ -136,11 +191,9 @@ export default function BackgroundMusic({ onPlayStateChange, startTrigger }) {
     if (isPlaying) {
       pauseAudio();
       setIsMuted(true);
-      localStorage.setItem("sk_music_pref", "off");
     } else {
       playAudio();
       setIsMuted(false);
-      localStorage.setItem("sk_music_pref", "on");
     }
   };
 
