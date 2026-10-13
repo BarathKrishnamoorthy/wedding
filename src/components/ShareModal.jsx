@@ -16,7 +16,7 @@ export default function ShareModal({ isOpen, onClose, onToast }) {
   const cleanBase = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
   const personalizedUrl = customGuestName.trim()
     ? `${cleanBase}?to=${encodeURIComponent(customGuestName.trim())}`
-    : cleanBase;
+    : `${cleanBase}?invitation=1`;
 
   // Exact WhatsApp invitation text matching the requested format
   const getFullShareText = () => {
