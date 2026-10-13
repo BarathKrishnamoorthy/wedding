@@ -54,7 +54,7 @@ export default function ClosingSection({ onOpenShare }) {
         </div>
 
         {/* Powered By RB Technologies */}
-        <div style={{
+        {/* <div style={{
           marginTop: "36px",
           display: "flex",
           flexDirection: "column",
@@ -90,7 +90,7 @@ export default function ClosingSection({ onOpenShare }) {
               fontFamily: "'Playfair Display', serif"
             }}>RB Technologies</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
