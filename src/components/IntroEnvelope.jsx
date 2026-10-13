@@ -432,7 +432,7 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
                 opacity: 0.9
               }}
             >
-              ✦ Royal Wedding Invitation ✦
+              ✦ Grand Wedding Invitation ✦
             </div>
           </div>
 

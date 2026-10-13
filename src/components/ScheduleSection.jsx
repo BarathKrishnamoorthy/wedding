@@ -19,7 +19,7 @@ export default function ScheduleSection({ onToast }) {
           <span>11 November 2026</span>
           <PartyPopper size={14} color="var(--gold)" />
         </div>
-        <h2 className="h2-title">The Royal Celebrations</h2>
+        <h2 className="h2-title">The Grand Celebrations</h2>
 
         {/* Event 1: Sacred Muhurtham */}
         <article
@@ -74,7 +74,7 @@ export default function ScheduleSection({ onToast }) {
 
           {/* Details */}
           <div>
-            <div
+            {/* <div
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -91,7 +91,7 @@ export default function ScheduleSection({ onToast }) {
               }}
             >
               <Sparkles size={11} /> Sacred Vedic Muhurtham
-            </div>
+            </div> */}
 
             <h3
               className="font-serif"
@@ -117,7 +117,7 @@ export default function ScheduleSection({ onToast }) {
               }}
             >
               <Clock size={15} color="var(--gold)" />
-              <span>Auspicious Hours: 9:30 am – 10:30 am</span>
+              <span>Auspicious Hours: 4:00 am – 5:30 am</span>
             </div>
 
             <div style={{ marginTop: "12px", color: "var(--ink-soft)", fontSize: "14.5px", lineHeight: "1.6" }}>
@@ -128,7 +128,7 @@ export default function ScheduleSection({ onToast }) {
             </div>
 
             {/* Dress Code Tag */}
-            <div
+            {/* <div
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -144,7 +144,7 @@ export default function ScheduleSection({ onToast }) {
             >
               <Shirt size={13} color="var(--gold)" />
               <span>Dress Code: Traditional Silk &amp; Pattu Veshti</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Actions */}
@@ -253,7 +253,7 @@ export default function ScheduleSection({ onToast }) {
 
           {/* Details */}
           <div>
-            <div
+            {/* <div
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -271,7 +271,7 @@ export default function ScheduleSection({ onToast }) {
               }}
             >
               <Sparkles size={11} /> Grand Gala Dinner &amp; Music
-            </div>
+            </div> */}
 
             <h3
               className="font-serif"
@@ -282,7 +282,7 @@ export default function ScheduleSection({ onToast }) {
                 textShadow: "0 0 16px rgba(255, 215, 0, 0.5)"
               }}
             >
-              The Royal Reception
+              The Grand Reception
             </h3>
 
             <div
@@ -297,7 +297,7 @@ export default function ScheduleSection({ onToast }) {
               }}
             >
               <Clock size={15} color="var(--gold)" />
-              <span>Evening: 6:30 pm onwards</span>
+              <span>Morning: 7:00 am onwards</span>
             </div>
 
             <div style={{ marginTop: "12px", color: "var(--ink-soft)", fontSize: "14.5px", lineHeight: "1.6" }}>

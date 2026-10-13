@@ -182,7 +182,7 @@ export default function HeroSection({ recipientName }) {
               textShadow: "0 0 14px rgba(255, 215, 0, 0.6)"
             }}
           >
-            ✦ Sri Maha Ganapathi Blessings ✦
+            {/* ✦ Sri Maha Ganapathi Blessings ✦ */}
           </div>
 
           <div className="eyebrow">

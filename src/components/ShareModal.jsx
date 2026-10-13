@@ -23,10 +23,10 @@ export default function ShareModal({ isOpen, onClose, onToast }) {
 
     return `${intro}
 
-📅 Wednesday, 11 November 2026, 9:30 am – 10:30 am
+📅 Wednesday, 11 November 2026, 4:00 am Onwards
 📍 Kariamangalam, Tamil Nadu 635111
 
-Reception: Wednesday, 11 November, Morning — 9:30 am - 10:30 am.
+Reception: Wednesday, 11 November, Morning — 7:00 am Onwards
 
 Please view the full invitation :
 ${personalizedUrl}`;
@@ -268,13 +268,13 @@ ${personalizedUrl}`;
                   With the blessings of our families, we joyfully invite you to the wedding of <strong>Siva &amp; Kani</strong>.
                 </p>
                 <p style={{ margin: "0 0 4px" }}>
-                  📅 <strong>Wednesday, 11 November 2026</strong>, 9:30 am – 10:30 am
+                  📅 <strong>Wednesday, 11 November 2026</strong>, 7:00 am Onwards
                 </p>
                 <p style={{ margin: "0 0 10px" }}>
                   📍 <strong>Kariamangalam, Tamil Nadu 635111</strong>
                 </p>
                 <p style={{ margin: "0 0 12px" }}>
-                  Reception: Wednesday, 11 November, Morning — 9:30 am - 10:30 am.
+                  Reception: Wednesday, 11 November, Morning — 7:00 am Onwards.
                 </p>
                 <p style={{ margin: "0 0 2px", color: "#54656F", fontSize: "13px" }}>
                   Please view the full invitation :

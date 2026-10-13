@@ -5,26 +5,26 @@ export const WEDDING_CONFIG = {
   heroSubtitle: "With the divine blessings of Almighty & our beloved elders",
 
   // Dates
-  weddingDateFormatted: "Wednesday, 12 November 2026",
-  receptionDateFormatted: "Wednesday, 12 November 2026",
+  weddingDateFormatted: "Wednesday, 11 November 2026",
+  receptionDateFormatted: "Wednesday, 11 November 2026",
   city: "Kariamangalam · Tamil Nadu",
 
-  // Muhurtham Timings
-  muhurthamStart: "2026-11-11T08:30:00+05:30",
-  muhurthamEnd: "2026-11-11T11:00:00+05:30",
-  muhurthamWindow: "Auspicious Muhurtham · 8:30 am – 11:00 am",
+  // Muhurtham Timings    
+  muhurthamStart: "2026-11-11T04:00:00+05:30",
+  muhurthamEnd: "2026-11-11T05:30:00+05:30",
+  muhurthamWindow: "Auspicious Muhurtham · 4:00 am - 5:30 am",
 
   // Reception Timings
-  receptionStart: "2026-11-11T11:30:00+05:30",
-  receptionEnd: "2026-11-11T15:30:00+05:30",
-  receptionWindow: "Morning Reception 11:30 am - 3:30 pm",
+  receptionStart: "2026-11-11T07:00:00+05:30",
+  receptionEnd: "2026-11-11T12:00:00+05:30",
+  receptionWindow: "Morning Reception 7:00 am - 12:00 pm",
 
   // Venues
   weddingVenue: {
-    name: "Sri Yashoda Mahal",
-    address: "Kariamangalam, Tamil Nadu 635111",
-    mapQuery: "8664+HG Kariamangalam, Tamil Nadu",
-    mapLink: "https://maps.app.goo.gl/NjiiMHDyo5EnJVw56"
+    name: "Ranganathar Temple",
+    address: "Ranganathar Temple, Devarmukkulam, Karadihalli, Tamil Nadu 635111",
+    mapQuery: "85WV+VG8, Devarmukkulam, Karadihalli, Tamil Nadu 635111",
+    mapLink: "https://maps.app.goo.gl/u416WnHR5t4C4aLs6?g_st=aw"
   },
   receptionVenue: {
     name: "Sri Yashoda Mahal",
