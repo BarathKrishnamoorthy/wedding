@@ -173,7 +173,7 @@ export default function HeroSection({ recipientName }) {
           {/* Tamil Calligraphy Invocation */}
           <div
             style={{
-              fontFamily: "'Cinzel Decorative', Georgia, serif",
+              fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif",
               fontSize: "clamp(13px, 3.8vw, 15px)",
               letterSpacing: "0.3em",
               color: "var(--gold-light)",
@@ -187,7 +187,7 @@ export default function HeroSection({ recipientName }) {
 
           <div className="eyebrow">
             <Sparkles size={14} color="var(--gold)" />
-            <span>The Grand Royal Union</span>
+            <span>The Grand Union</span>
             <Sparkles size={14} color="var(--gold)" />
           </div>
 

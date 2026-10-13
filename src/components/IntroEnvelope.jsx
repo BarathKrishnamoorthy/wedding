@@ -430,12 +430,14 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
                 left: 0,
                 right: 0,
                 textAlign: "center",
-                fontFamily: "'Cinzel Decorative', Georgia, serif",
-                fontSize: "11px",
-                letterSpacing: "0.24em",
+                fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif",
+                fontSize: "12px",
+                fontWeight: "700",
+                letterSpacing: "0.26em",
                 color: "#FFD700",
                 textTransform: "uppercase",
-                opacity: 0.9
+                textShadow: "0 0 10px rgba(255, 215, 0, 0.45)",
+                opacity: 0.95
               }}
             >
               ✦ Grand Wedding Invitation ✦
@@ -462,10 +464,10 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
             >
               <div
                 style={{
-                  fontFamily: "'Cinzel Decorative', 'Fraunces', serif",
+                  fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif",
                   fontSize: "13px",
-                  fontWeight: "900",
-                  letterSpacing: "0.14em",
+                  fontWeight: "800",
+                  letterSpacing: "0.18em",
                   color: "#24050D",
                   textTransform: "uppercase",
                   display: "flex",
@@ -541,6 +543,7 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
               right: 0,
               bottom: "-54px",
               textAlign: "center",
+              fontFamily: "'Cinzel', 'DM Sans', sans-serif",
               fontSize: "12px",
               letterSpacing: "0.28em",
               textTransform: "uppercase",

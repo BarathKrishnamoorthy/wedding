@@ -19,7 +19,7 @@ export default function InvitationCard() {
               fontSize: "14px",
               letterSpacing: "0.22em",
               color: "var(--gold)",
-              fontFamily: "'Cinzel Decorative', Georgia, serif",
+              fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif",
               textTransform: "uppercase",
               marginBottom: "14px",
               textShadow: "0 0 12px rgba(255, 215, 0, 0.5)"

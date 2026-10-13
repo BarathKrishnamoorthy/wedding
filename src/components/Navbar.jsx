@@ -23,7 +23,7 @@ export default function Navbar({ onOpenTheme, onOpenShare, onReplayIntro, fontSi
         className="chip"
         style={{
           pointerEvents: "auto",
-          fontFamily: "'Cinzel Decorative', Georgia, serif",
+          fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif",
           fontWeight: "700",
           fontSize: "13px",
           letterSpacing: "0.15em",

@@ -183,7 +183,7 @@ body.locked {
 }
 
 .font-display {
-  font-family: "Cinzel Decorative", "Fraunces", Georgia, serif;
+  font-family: "Cinzel", "Playfair Display", Georgia, serif;
 }
 
 .font-script {
@@ -210,7 +210,7 @@ body.locked {
 
 /* 3D Mass Metallic Gold Text */
 .mass-title {
-  font-family: "Cinzel Decorative", "Fraunces", serif;
+  font-family: "Cinzel", "Playfair Display", serif;
   font-weight: 900;
   letter-spacing: 0.04em;
   text-transform: uppercase;
