@@ -10,10 +10,13 @@ export default function ShareModal({ isOpen, onClose, onToast }) {
 
   if (!isOpen) return null;
 
-  const baseUrl = window.location.origin + window.location.pathname;
+  const productionDomain = "https://siva-kani.vercel.app/";
+  const isProd = typeof window !== "undefined" && window.location.hostname.includes("siva-kani.vercel.app");
+  const baseUrl = isProd ? (window.location.origin + window.location.pathname) : productionDomain;
+  const cleanBase = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
   const personalizedUrl = customGuestName.trim()
-    ? `${baseUrl}?to=${encodeURIComponent(customGuestName.trim())}`
-    : baseUrl;
+    ? `${cleanBase}?to=${encodeURIComponent(customGuestName.trim())}`
+    : cleanBase;
 
   // Exact WhatsApp invitation text matching the requested format
   const getFullShareText = () => {
@@ -55,7 +58,7 @@ ${personalizedUrl}`;
 
   const handleNativeShare = async () => {
     const shareData = {
-      title: `${WEDDING_CONFIG.groom} & ${WEDDING_CONFIG.bride} — 22 November 2026`,
+      title: `${WEDDING_CONFIG.groom} & ${WEDDING_CONFIG.bride} — ${WEDDING_CONFIG.weddingDateFormatted}`,
       text: getFullShareText(),
       url: personalizedUrl
     };
@@ -246,13 +249,13 @@ ${personalizedUrl}`;
                 />
                 <div style={{ padding: "8px 10px", minWidth: 0 }}>
                   <div style={{ fontWeight: "600", fontSize: "13px", color: "#111B21", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                    Siva &amp; Kani — 22 November 2026
+                    Siva &amp; Kani — 11 November 2026
                   </div>
                   <div style={{ fontSize: "11.5px", color: "#667781", marginTop: "2px", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                     You are warmly invited to our wedding...
                   </div>
                   <div style={{ fontSize: "11px", color: "#8696A0", marginTop: "4px", display: "flex", alignItems: "center", gap: "3px" }}>
-                    <Link size={10} /> {window.location.hostname}
+                    <Link size={10} /> siva-kani.vercel.app
                   </div>
                 </div>
               </div>
@@ -364,7 +367,7 @@ ${personalizedUrl}`;
               </div>
 
               <div style={{ fontSize: "12px", color: "var(--gold-light)", marginTop: "6px" }}>
-                Sunday, 22 November 2026 · Chennai
+                Wednesday, 11 November 2026 · Kariamangalam
               </div>
 
               <div

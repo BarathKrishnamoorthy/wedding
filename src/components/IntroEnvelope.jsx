@@ -11,7 +11,9 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
   const [isRiserOver, setIsRiserOver] = useState(false);
   const [isSealGone, setIsSealGone] = useState(false);
   const [isSealPressed, setIsSealPressed] = useState(false);
-  const [isIntroGone, setIsIntroGone] = useState(false);
+  const [isIntroGone, setIsIntroGone] = useState(() => {
+    return sessionStorage.getItem("sk_wedding_opened") === "1";
+  });
   const [showSkip, setShowSkip] = useState(false);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
@@ -24,9 +26,12 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
     // Check if already opened in this session
     const hasOpened = sessionStorage.getItem("sk_wedding_opened") === "1";
     if (hasOpened) {
+      document.body.classList.remove("locked");
       setIsIntroGone(true);
       if (onOpenComplete) onOpenComplete();
       return;
+    } else {
+      document.body.classList.add("locked");
     }
 
     // Show skip after a brief delay
@@ -63,6 +68,7 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
     animationFrameRef.current = requestAnimationFrame(updateTilt);
 
     return () => {
+      document.body.classList.remove("locked");
       clearTimeout(skipTimer);
       window.removeEventListener("pointermove", handleMouseMove);
       window.removeEventListener("deviceorientation", handleDeviceOrientation);
@@ -507,8 +513,8 @@ export default function IntroEnvelope({ onOpenComplete, recipientName }) {
               <div
                 style={{
                   position: "relative",
-                  width: "116px",
-                  height: "116px",
+                  width: "124px",
+                  height: "124px",
                   display: "block",
                   filter: "drop-shadow(0 14px 22px rgba(0, 0, 0, 0.9)) drop-shadow(0 0 30px rgba(255, 215, 0, 0.75))"
                 }}

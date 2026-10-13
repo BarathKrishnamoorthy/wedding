@@ -128,9 +128,13 @@ export default function PetalsCanvas({ triggerGust }) {
     const handleVisibility = () => {
       if (document.hidden) {
         isRunning = false;
+        cancelAnimationFrame(animationFrameId);
       } else {
-        isRunning = true;
-        animationFrameId = requestAnimationFrame(render);
+        if (!isRunning) {
+          isRunning = true;
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = requestAnimationFrame(render);
+        }
       }
     };
 

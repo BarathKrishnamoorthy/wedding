@@ -2,6 +2,7 @@ export const WEDDING_CONFIG = {
   groom: "Siva",
   bride: "Kani",
   tagline: "#SivaWedsKani",
+  websiteUrl: "https://siva-kani.vercel.app/",
   heroSubtitle: "With the divine blessings of Almighty & our beloved elders",
 
   // Dates

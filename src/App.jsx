@@ -59,6 +59,31 @@ export default function App() {
     document.documentElement.style.setProperty("--fs", savedFs);
   }, []);
 
+  // Ensure scroll is always enabled when intro has already been opened, including across tab switches
+  useEffect(() => {
+    const checkAndUnlockScroll = () => {
+      if (sessionStorage.getItem("sk_wedding_opened") === "1") {
+        document.body.classList.remove("locked");
+      }
+    };
+
+    checkAndUnlockScroll();
+
+    const handleVisibilityChange = () => {
+      if (!document.hidden) {
+        checkAndUnlockScroll();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("focus", checkAndUnlockScroll);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("focus", checkAndUnlockScroll);
+    };
+  }, []);
+
   const handleSelectTheme = (themeId) => {
     setCurrentTheme(themeId);
     document.documentElement.setAttribute("data-theme", themeId);
