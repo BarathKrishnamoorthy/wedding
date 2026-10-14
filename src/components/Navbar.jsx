@@ -62,7 +62,7 @@ export default function Navbar({ onOpenTheme, onOpenShare, onReplayIntro, fontSi
         </button> */}
 
         {/* Share Button */}
-        <button
+        {/* <button
           type="button"
           onClick={onOpenShare}
           className="chip"
@@ -70,10 +70,10 @@ export default function Navbar({ onOpenTheme, onOpenShare, onReplayIntro, fontSi
           title="Share Invitation"
         >
           <Share2 size={13} color="var(--primary)" />
-        </button>
+        </button> */}
 
         {/* Replay Intro Envelope */}
-        <button
+        {/* <button
           type="button"
           onClick={onReplayIntro}
           className="chip"
@@ -81,7 +81,7 @@ export default function Navbar({ onOpenTheme, onOpenShare, onReplayIntro, fontSi
           title="Replay Envelope Opening"
         >
           <RotateCcw size={13} color="var(--primary)" />
-        </button>
+        </button> */}
       </div>
     </header>
   );
