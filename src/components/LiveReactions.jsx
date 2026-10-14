@@ -74,7 +74,7 @@ export default function LiveReactions() {
           boxShadow: "0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.25)"
         }}
       >
-        <div
+        {/* <div
           style={{
             fontSize: "9px",
             textTransform: "uppercase",
@@ -86,7 +86,7 @@ export default function LiveReactions() {
           }}
         >
           React
-        </div>
+        </div> */}
 
         {emojis.map((e, idx) => (
           <button

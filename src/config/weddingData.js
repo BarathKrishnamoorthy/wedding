@@ -22,8 +22,8 @@ export const WEDDING_CONFIG = {
 
   // Venues
   weddingVenue: {
-    name: "Sri Yashoda Mahal",
-    address: "Ranganathar Temple, Devarmukkulam, Karadihalli, Tamil Nadu 635111",
+    name: "Ranganathar Temple",
+    address: "Devarmukkulam, Karadihalli, Tamil Nadu 635111",
     mapQuery: "85WV+VG8, Devarmukkulam, Karadihalli, Tamil Nadu 635111",
     mapLink: "https://maps.app.goo.gl/u416WnHR5t4C4aLs6?g_st=aw"
   },

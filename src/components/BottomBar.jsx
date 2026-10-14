@@ -64,7 +64,7 @@ export default function BottomBar() {
       >
         {barState === "directions" ? (
           <a
-            href={WEDDING_CONFIG.weddingVenue.mapLink}
+            href={WEDDING_CONFIG.receptionVenue.mapLink}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-solid"
